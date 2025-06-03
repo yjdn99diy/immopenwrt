@@ -31,6 +31,8 @@ ramips_setup_interfaces()
 	youku,yk-l2|\
 	zbtlink,zbt-we1326|\
 	zbtlink,zbt-we3526|\
+	slink,sbox-r3e|\
+	slink,sbox-r5e-4g|\
 	zbtlink,zbt-wg2626|\
 	zbtlink,zbt-wg3526-16m|\
 	zbtlink,zbt-wg3526-32m)
@@ -198,6 +200,7 @@ ramips_setup_macs()
 	unielec,u7621-06-16m|\
 	unielec,u7621-06-64m|\
 	xzwifi,creativebox-v1|\
+	slink,sbox-r3e|\
 	zbtlink,zbt-wg2626)
 		wan_mac=$(macaddr_add "$(mtd_get_mac_binary factory 0xe000)" 1)
 		;;
@@ -320,6 +323,7 @@ ramips_setup_macs()
 		lan_mac=$(mtd_get_mac_binary factory 0xe006)
 		label_mac=$lan_mac
 		;;
+	slink,sbox-r5e-4g|\
 	zbtlink,zbt-wg3526-16m|\
 	zbtlink,zbt-wg3526-32m)
 		wan_mac=$(macaddr_add "$(mtd_get_mac_binary factory 0xe000)" 1)
