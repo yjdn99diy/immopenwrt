@@ -1,0 +1,12 @@
+/dts-v1/;
+
+#include "mt7621_zbtlink_zbt-wg3526.dtsi"
+
+/ {
+	compatible = "slink,sbox-r5e-4g", "zbtlink,zbt-wg3526", "mediatek,mt7621-soc";
+	model = "Slink SBOX-R5E (4G)";
+};
+
+&firmware {
+	reg = <0x50000 0x1fb0000>;
+};
