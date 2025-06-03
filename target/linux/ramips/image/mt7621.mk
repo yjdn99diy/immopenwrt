@@ -1044,6 +1044,27 @@ define Device/zbtlink_zbt-we3526
 endef
 TARGET_DEVICES += zbtlink_zbt-we3526
 
+define Device/slink_sbox-r3e
+  IMAGE_SIZE := 32448k
+  DEVICE_VENDOR := Slink
+  DEVICE_MODEL := SBOX-R3E
+  DEVICE_PACKAGES := kmod-ata-core kmod-ata-ahci kmod-sdhci-mt7620 \
+	kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport wpad-openssl
+  SUPPORTED_DEVICES += zbt-wg2626
+endef
+TARGET_DEVICES += slink_sbox-r3e
+
+define Device/slink_sbox-r5e-4g
+  IMAGE_SIZE := 32448k
+  DEVICE_VENDOR := Slink
+  DEVICE_MODEL := SBOX-R5E
+  DEVICE_VARIANT := 4G
+  DEVICE_PACKAGES := kmod-ata-core kmod-ata-ahci kmod-sdhci-mt7620 \
+	kmod-mt7603 kmod-mt76x2 kmod-usb3 kmod-usb-ledtrig-usbport wpad-openssl
+  SUPPORTED_DEVICES += ac1200pro zbt-wg3526-32M
+endef
+TARGET_DEVICES += slink_sbox-r5e-4g
+
 define Device/zbtlink_zbt-wg2626
   IMAGE_SIZE := 16064k
   DEVICE_VENDOR := Zbtlink
